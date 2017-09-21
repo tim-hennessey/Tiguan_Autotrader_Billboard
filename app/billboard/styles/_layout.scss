@@ -1,0 +1,341 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+#banner {
+    background: #111;
+    position: absolute;
+    overflow: hidden;
+    width: $banner-width;
+    height: $banner-height;
+    left: 50%;
+    top: 50%;
+    margin-left: -$banner-width / 2;
+    margin-top: -$banner-height / 2;
+
+    #button-exit {
+        background-color: rgba(255, 0, 255, 0);
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    #close-button {
+        background-color: rgba(255, 0, 255, 0);
+        cursor: pointer;
+        height: 22px;
+        width: 85px;
+        top: 10px;
+        left: 10px;
+        z-index: 1500;
+        position: absolute;
+    }
+
+    #border {
+        border: 3px solid #FFFFFF;
+        display: block;
+        width: $banner-width - 6;
+        height: $banner-height - 6;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 1500;
+    }
+
+    #border2 {
+        border: 1px solid #000000;
+        display: block;
+        width: $banner-width - 2;
+        height: $banner-height - 2;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 1500;
+    }
+
+    #footer {
+        background: #FFFFFF;
+        right: 0;
+        bottom: 0;
+        width: $banner-width;
+        height: 80px;
+        position: absolute;
+
+        #logo {
+            right: 22px;
+            bottom: 15px;
+            position: absolute;
+        }
+
+        #intro_cta {
+            left: 30px;
+            bottom: 27px;
+            position: absolute;
+            clip: rect(0px, 438px, 27px, 0px);
+        }
+
+        #intro_cta_arrow {
+            left: 30px;
+            bottom: 27px;
+            position: absolute;
+            clip: rect(0px, 448px, 27px, 438px);
+        }
+    }
+
+    #curtain {
+        background: #FFF;
+        top: 0;
+        left: 0;
+        width: $banner-width;
+        height: $banner-height;
+        position: absolute;
+        pointer-events: none;
+        z-index: 500;
+    }
+
+    #before-after {
+        position: relative;
+        width: $banner-width;
+        height: 420px;
+    }
+
+    #collapse {
+        position: absolute;
+        width: 175px;
+        height: 75px;
+        z-index: 1500;
+        top: 0;
+        left: 0;
+        background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .5) 30%, rgba(0, 0, 0, 0) 50%);
+        opacity: 0;
+        pointer-events: none;
+
+        #collapse_btn_txt {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+    }
+
+    .view {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $banner-width;
+        height: 420px;
+        overflow: hidden;
+    }
+
+    .light {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: radial-gradient(ellipse at center, rgba(255,255,185,1) 0%,rgba(255,255,185,0) 30%);
+        //background: radial-gradient(ellipse at center, rgba(255,0,255,.75) 0%,rgba(255,0,255,0) 50%);
+        overflow: visible;
+    }
+
+    #light1 {
+        top: -12px;
+        left: 255px;
+    }
+
+    #light2 {
+        top: -8px;
+        left: 280px;
+    }
+
+    #light3 {
+        top: -10px;
+        left: 325px;
+    }
+
+    #light4 {
+        top: -10px;
+        left: 375px;
+    }
+
+    #light5 {
+        top: 40px;
+        left: 335px;
+    }
+
+    #light6 {
+        top: -12px;
+        left: 560px;
+    }
+
+    #light7 {
+        top: -8px;
+        left: 620px;
+    }
+
+    #light8 {
+        top: 6px;
+        left: 680px;
+    }
+
+    #light9 {
+        top: -10px;
+        left: 740px;
+    }
+
+    #sign1 {
+        top: 58px;
+        left: 30px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #sign2 {
+        top: 40px;
+        left: 163px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #sign3 {
+        top: 49px;
+        left: 207px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #tree {
+        top: 0;
+        left: 70px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #flowers {
+        top: 232px;
+        left: 891px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #flowers2 {
+        top: 232px;
+        left: 761px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+
+
+    .view-before {
+        z-index: 100;
+    }
+
+    .view-after {
+        z-index: 200;
+    }
+
+    #dragme {
+        position: absolute;
+        width: 3px;
+        height: 420px;
+        top: 0;
+        left: 0;
+        background-color: #00b1eb;
+        cursor: pointer;
+        z-index: 300;
+
+        #knob {
+            position: absolute;
+            top: 187px;
+            left: -22px;
+            transform: translate3d(0, 0, 0.1px);
+            cursor: pointer;
+        }
+        #knobArrowLeft {
+            position: absolute;
+            top: 187px;
+            left: -22px;
+            pointer-events: none;
+            transform: translate3d(0, 0, 0.1px);
+            clip: rect(16px, 23px, 31px, 11px);
+        }
+        #knobArrowRight {
+            position: absolute;
+            top: 187px;
+            left: -22px;
+            pointer-events: none;
+            transform: translate3d(0, 0, 0.1px);
+            clip: rect(16px, 36px, 31px, 24px);
+        }
+    }
+
+    #introText {
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 200;
+        opacity: 0;
+        pointer-events: none;
+
+        #txt1 {
+            position: absolute;
+            top: 194px;
+            left: 172px;
+            opacity: 0;
+        }
+
+        #txt2 {
+            position: absolute;
+            top: 194px;
+            right: 172px;
+            opacity: 0;
+        }
+    }
+
+    #resolve {
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+
+        #hero {
+            bottom: 0;
+            right: 50px;
+            position: absolute;
+            transform: scale(1.1) translate3d(0, 0, 0.1px);
+        }
+        #resolve_txta {
+            top: 50px;
+            left: 50px;
+            clip: rect(0px, 382px, 95px, 0px);
+            position: absolute;
+        }
+        #resolve_txtb {
+            top: 50px;
+            left: 50px;
+            clip: rect(95px, 382px, 173px, 0px);
+            position: absolute;
+            opacity: 0;
+        }
+        #resolve_cta {
+            top: 210px;
+            left: 50px;
+            cursor: pointer;
+            background: #00b1eb;
+            border-radius: 5px;
+            width: 185px;
+            height: 48px;
+            position: absolute;
+            opacity: 0;
+
+            #resolve_cta_txt {
+                position: absolute;
+            }
+        }
+
+    }
+
+}

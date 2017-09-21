@@ -1,0 +1,6 @@
+{
+  "generator-banner": {
+    "bannerType": "Sizmek",
+    "includeZepto": false
+  }
+}
