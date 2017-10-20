@@ -18,20 +18,21 @@ body {
     #button-exit {
         background-color: rgba(255, 0, 255, 0);
         cursor: pointer;
-        height: 100%;
-        left: 0;
-        position: absolute;
+        height: $banner-height;
+        width: 162px;
         top: 0;
-        width: 100%;
+        right: 0;
+        z-index: 1400;
+        position: absolute;
     }
 
     #close-button {
         background-color: rgba(255, 0, 255, 0);
         cursor: pointer;
         height: 22px;
-        width: 85px;
-        top: 10px;
-        left: 10px;
+        width: 22px;
+        top: 6px;
+        right: 6px;
         z-index: 1500;
         position: absolute;
     }
@@ -64,9 +65,10 @@ body {
         background: #FFFFFF;
         right: 0;
         bottom: 0;
-        width: $banner-width;
-        height: 80px;
+        width: 162px;
+        height: $banner-height;
         position: absolute;
+        z-index: 1400;
 
         #logo {
             right: 22px;
@@ -74,18 +76,24 @@ body {
             position: absolute;
         }
 
-        #intro_cta {
-            left: 30px;
-            bottom: 27px;
+        #collapse_btn_x {
+            right: 8px;
+            top: 8px;
             position: absolute;
-            clip: rect(0px, 438px, 27px, 0px);
         }
 
-        #intro_cta_arrow {
-            left: 30px;
-            bottom: 27px;
+        #cta_arrow {
+            left: 12px;
+            top: 20px;
+            clip: rect(0px, 90px, 12px, 80px);
             position: absolute;
-            clip: rect(0px, 448px, 27px, 438px);
+        }
+
+        #cta_txt {
+            left: 12px;
+            top: 20px;
+            clip: rect(0px, 80px, 12px, 0px);
+            position: absolute;
         }
     }
 
@@ -100,136 +108,27 @@ body {
         z-index: 500;
     }
 
-    #before-after {
-        position: relative;
-        width: $banner-width;
-        height: 420px;
+    #headline {
+        top: 100px;
+        left: 25px;
+        position: absolute;
+        pointer-events: none;
     }
 
-    #collapse {
-        position: absolute;
-        width: 175px;
-        height: 75px;
-        z-index: 1500;
-        top: 0;
-        left: 0;
-        background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .5) 30%, rgba(0, 0, 0, 0) 50%);
-        opacity: 0;
-        pointer-events: none;
-
-        #collapse_btn_txt {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-        }
+    #before-after {
+        position: relative;
+        width: 808px;
+        height: $banner-height;
     }
 
     .view {
         position: absolute;
         top: 0;
         left: 0;
-        width: $banner-width;
-        height: 420px;
+        width: 808px;
+        height: $banner-height;
         overflow: hidden;
     }
-
-    .light {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background: radial-gradient(ellipse at center, rgba(255,255,185,1) 0%,rgba(255,255,185,0) 30%);
-        //background: radial-gradient(ellipse at center, rgba(255,0,255,.75) 0%,rgba(255,0,255,0) 50%);
-        overflow: visible;
-    }
-
-    #light1 {
-        top: -12px;
-        left: 255px;
-    }
-
-    #light2 {
-        top: -8px;
-        left: 280px;
-    }
-
-    #light3 {
-        top: -10px;
-        left: 325px;
-    }
-
-    #light4 {
-        top: -10px;
-        left: 375px;
-    }
-
-    #light5 {
-        top: 40px;
-        left: 335px;
-    }
-
-    #light6 {
-        top: -12px;
-        left: 560px;
-    }
-
-    #light7 {
-        top: -8px;
-        left: 620px;
-    }
-
-    #light8 {
-        top: 6px;
-        left: 680px;
-    }
-
-    #light9 {
-        top: -10px;
-        left: 740px;
-    }
-
-    #sign1 {
-        top: 58px;
-        left: 30px;
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #sign2 {
-        top: 40px;
-        left: 163px;
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #sign3 {
-        top: 49px;
-        left: 207px;
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #tree {
-        top: 0;
-        left: 70px;
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #flowers {
-        top: 232px;
-        left: 891px;
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #flowers2 {
-        top: 232px;
-        left: 761px;
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-
 
     .view-before {
         z-index: 100;
@@ -242,7 +141,7 @@ body {
     #dragme {
         position: absolute;
         width: 3px;
-        height: 420px;
+        height: $banner-height;
         top: 0;
         left: 0;
         background-color: #00b1eb;
@@ -251,91 +150,40 @@ body {
 
         #knob {
             position: absolute;
-            top: 187px;
-            left: -22px;
+            top: 109px;
+            left: -15.5px;
             transform: translate3d(0, 0, 0.1px);
             cursor: pointer;
         }
+
+        #circle {
+            position: absolute;
+            top: 114px;
+            left: -10.5px;
+            width: 21px;
+            height: 21px;
+            background: white;
+            -moz-border-radius: 10.5px;
+            -webkit-border-radius: 10.5px;
+            border-radius: 10.5px;
+            cursor: pointer;
+        }
+
         #knobArrowLeft {
             position: absolute;
-            top: 187px;
-            left: -22px;
+            top: 109px;
+            left: -15.5px;
             pointer-events: none;
             transform: translate3d(0, 0, 0.1px);
-            clip: rect(16px, 23px, 31px, 11px);
+            clip: rect(12px, 14px, 21px, 9px);
         }
         #knobArrowRight {
             position: absolute;
-            top: 187px;
-            left: -22px;
+            top: 109px;
+            left: -15.5px;
             pointer-events: none;
             transform: translate3d(0, 0, 0.1px);
-            clip: rect(16px, 36px, 31px, 24px);
+            clip: rect(12px, 24px, 21px, 19px);
         }
     }
-
-    #introText {
-        background-color: rgba(0, 0, 0, .5);
-        z-index: 200;
-        opacity: 0;
-        pointer-events: none;
-
-        #txt1 {
-            position: absolute;
-            top: 194px;
-            left: 172px;
-            opacity: 0;
-        }
-
-        #txt2 {
-            position: absolute;
-            top: 194px;
-            right: 172px;
-            opacity: 0;
-        }
-    }
-
-    #resolve {
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-
-        #hero {
-            bottom: 0;
-            right: 50px;
-            position: absolute;
-            transform: scale(1.1) translate3d(0, 0, 0.1px);
-        }
-        #resolve_txta {
-            top: 50px;
-            left: 50px;
-            clip: rect(0px, 382px, 95px, 0px);
-            position: absolute;
-        }
-        #resolve_txtb {
-            top: 50px;
-            left: 50px;
-            clip: rect(95px, 382px, 173px, 0px);
-            position: absolute;
-            opacity: 0;
-        }
-        #resolve_cta {
-            top: 210px;
-            left: 50px;
-            cursor: pointer;
-            background: #00b1eb;
-            border-radius: 5px;
-            width: 185px;
-            height: 48px;
-            position: absolute;
-            opacity: 0;
-
-            #resolve_cta_txt {
-                position: absolute;
-            }
-        }
-
-    }
-
 }
